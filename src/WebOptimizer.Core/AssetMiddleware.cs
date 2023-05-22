@@ -88,7 +88,7 @@ namespace WebOptimizer
             {
                 if (options.EnableCaching == true)
                 {
-                    context.Response.Headers[HeaderNames.CacheControl] = "max-age=31536000,immutable"; // 1 year, immutable
+                    context.Response.Headers[HeaderNames.CacheControl] = "public,max-age=31536000,immutable"; // 1 year, immutable
                 }
 
                 context.Response.Headers[HeaderNames.ETag] = $"\"{cacheKey}\"";
